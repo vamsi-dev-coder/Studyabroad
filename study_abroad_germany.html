@@ -4,10 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="Study Abroad — Practical guide for Indian students applying to German universities. APS, dMAT, visa &amp; living guidance.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none';">
     <title>Study Abroad — Master Your Germany Journey</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Clash+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Small utilities for accessibility */
+        
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            padding: 8px;
+            background: var(--blue);
+            color: #fff;
+            border-radius: 6px;
+            z-index: 999
+        }
+        
+        .skip-link:focus {
+            left: 12px;
+            top: 12px;
+            width: auto;
+            height: auto
+        }
+        
+        .noscript-note {
+            background: var(--amber-dim);
+            color: var(--text);
+            padding: 10px 14px;
+            border-radius: 6px;
+            margin: 10px
+        }
         /* ═══════════════════════════════════════════
    TOKENS
 ═══════════════════════════════════════════ */
@@ -2085,10 +2117,13 @@
 
 <body>
 
+    <a href="#main" class="skip-link">Skip to content</a>
+    <noscript><div class="noscript-note">This site works best with JavaScript enabled. Some interactive features may be limited.</div></noscript>
+
     <!-- ══════ TOPBAR ══════ -->
     <header id="topbar">
         <div class="topbar-logo">
-            <button id="hamburger" class="tb-btn" onclick="toggleSidebar()" aria-label="Menu">
+            <button id="hamburger" type="button" class="tb-btn" onclick="toggleSidebar()" aria-label="Menu">
       <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
             <div class="logo-mark">
@@ -2106,7 +2141,7 @@
         </div>
         <div class="topbar-right">
             <span class="tb-chip">🇩🇪 Complete Guide</span>
-            <button class="tb-btn" id="theme-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+            <button type="button" class="tb-btn" id="theme-btn" onclick="toggleTheme()" aria-label="Toggle theme">
       <svg id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
       <svg id="i-moon" viewBox="0 0 24 24" style="display:none"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
     </button>
@@ -2176,16 +2211,16 @@
             <div class="sb-sep" style="margin-top:auto"></div>
             <div class="sb-links">
                 <div class="sb-links-title">Official Links</div>
-                <a href="https://www.daad.de/en/" target="_blank" class="ext-link">
+                <a href="https://www.daad.de/en/" target="_blank" rel="noopener noreferrer" class="ext-link">
                     <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> DAAD Germany
                 </a>
-                <a href="https://aps-india.de/" target="_blank" class="ext-link">
+                <a href="https://aps-india.de/" target="_blank" rel="noopener noreferrer" class="ext-link">
                     <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> APS India Portal
                 </a>
-                <a href="https://digital.diplo.de/visa" target="_blank" class="ext-link">
+                <a href="https://digital.diplo.de/visa" target="_blank" rel="noopener noreferrer" class="ext-link">
                     <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> CSP Visa Portal
                 </a>
-                <a href="https://www.hochschulkompass.de/" target="_blank" class="ext-link">
+                <a href="https://www.hochschulkompass.de/" target="_blank" rel="noopener noreferrer" class="ext-link">
                     <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Hochschulkompass
                 </a>
             </div>
@@ -2212,11 +2247,11 @@
                             </div>
                         </div>
                         <div class="hero-actions">
-                            <button class="btn-primary" onclick="goPage('process','Application Steps')">
+                            <button type="button" class="btn-primary" onclick="goPage('process','Application Steps')">
           Start with the process
           <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </button>
-                            <button class="btn-ghost" onclick="goPage('visa','Visa Guide')">Visa guide</button>
+                            <button type="button" class="btn-ghost" onclick="goPage('visa','Visa Guide')">Visa guide</button>
                         </div>
                         <div class="hero-stats">
                             <div class="hstat">
@@ -2302,23 +2337,23 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><a href="https://www.wg-gesucht.de" target="_blank">WG-Gesucht</a></td>
+                                    <td><a href="https://www.wg-gesucht.de" target="_blank" rel="noopener noreferrer">WG-Gesucht</a></td>
                                     <td>Shared apartments, rooms, short-term stays</td>
                                 </tr>
                                 <tr>
-                                    <td><a href="https://housinganywhere.com" target="_blank">HousingAnywhere</a></td>
+                                    <td><a href="https://housinganywhere.com" target="_blank" rel="noopener noreferrer">HousingAnywhere</a></td>
                                     <td>Verified furnished rooms—book before arrival</td>
                                 </tr>
                                 <tr>
-                                    <td><a href="https://www.immobilienscout24.de" target="_blank">Immobilienscout24</a></td>
+                                    <td><a href="https://www.immobilienscout24.de" target="_blank" rel="noopener noreferrer">Immobilienscout24</a></td>
                                     <td>Germany's largest portal, long-term rentals</td>
                                 </tr>
                                 <tr>
-                                    <td><a href="https://wunderflats.com" target="_blank">Wunderflats</a></td>
+                                    <td><a href="https://wunderflats.com" target="_blank" rel="noopener noreferrer">Wunderflats</a></td>
                                     <td>Furnished apartments for expats &amp; researchers</td>
                                 </tr>
                                 <tr>
-                                    <td><a href="https://www.kleinanzeigen.de" target="_blank">Kleinanzeigen</a></td>
+                                    <td><a href="https://www.kleinanzeigen.de" target="_blank" rel="noopener noreferrer">Kleinanzeigen</a></td>
                                     <td>Classifieds—apartments, furniture, second-hand</td>
                                 </tr>
                             </tbody>
@@ -3209,7 +3244,7 @@
                         </div>
                         <div class="uz-title">Drop your story here</div>
                         <div class="uz-desc">Supports .txt, .md, and .docx — drag and drop or click to browse</div>
-                        <button class="uz-btn" onclick="event.stopPropagation();triggerUpload()">
+                        <button type="button" class="uz-btn" onclick="event.stopPropagation();triggerUpload()">
         <svg viewBox="0 0 24 24"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0018 9h-1.26A8 8 0 103 16.3"/></svg>
         Choose File
       </button>
