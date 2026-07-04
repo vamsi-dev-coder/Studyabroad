@@ -1,0 +1,3352 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Study Abroad — Master Your Germany Journey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Clash+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ═══════════════════════════════════════════
+   TOKENS
+═══════════════════════════════════════════ */
+        
+         :root {
+            --bg: #0a0e15;
+            --surface: #0f1219;
+            --surface2: #131829;
+            --surface3: #1a202c;
+            --line: rgba(255, 255, 255, 0.04);
+            --line2: rgba(255, 255, 255, 0.08);
+            --line3: rgba(255, 255, 255, 0.14);
+            --text: #f5f7fb;
+            --text2: #92a0b6;
+            --text3: #4b5568;
+            --blue: #4f80f7;
+            --blue2: #7aa0ff;
+            --blue-dim: rgba(79, 128, 247, 0.08);
+            --blue-mid: rgba(79, 128, 247, 0.16);
+            --blue-ring: rgba(79, 128, 247, 0.32);
+            --cyan: #22d3ee;
+            --cyan-dim: rgba(34, 211, 238, 0.08);
+            --green: #10d982;
+            --green-dim: rgba(16, 217, 130, 0.08);
+            --amber: #f59e0b;
+            --amber-dim: rgba(245, 158, 11, 0.08);
+            --rose: #f43f5e;
+            --rose-dim: rgba(244, 63, 94, 0.08);
+            --violet: #8b5cf6;
+            --violet-dim: rgba(139, 92, 246, 0.08);
+            --sw: 272px;
+            --hh: 58px;
+            --r: 10px;
+            --rl: 14px;
+            --rxl: 18px;
+        }
+        
+        [data-theme="light"] {
+            --bg: #f9fafb;
+            --surface: #ffffff;
+            --surface2: #f3f4f6;
+            --surface3: #e5e7eb;
+            --line: rgba(0, 0, 0, 0.04);
+            --line2: rgba(0, 0, 0, 0.08);
+            --line3: rgba(0, 0, 0, 0.14);
+            --text: #0f172a;
+            --text2: #374151;
+            --text3: #6b7280;
+            --blue: #2563eb;
+            --blue2: #1d4ed8;
+            --blue-dim: rgba(37, 99, 235, 0.06);
+            --blue-mid: rgba(37, 99, 235, 0.12);
+            --blue-ring: rgba(37, 99, 235, 0.28);
+            --cyan: #0891b2;
+            --cyan-dim: rgba(8, 145, 178, 0.06);
+            --green: #059669;
+            --green-dim: rgba(5, 150, 105, 0.06);
+            --amber: #d97706;
+            --amber-dim: rgba(217, 119, 6, 0.06);
+            --rose: #e11d48;
+            --rose-dim: rgba(225, 29, 72, 0.06);
+            --violet: #7c3aed;
+            --violet-dim: rgba(124, 58, 237, 0.06);
+        }
+        /* ═══════════════════════════════════════════
+   BASE
+═══════════════════════════════════════════ */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Plus Jakarta Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+            letter-spacing: -0.3px;
+            font-weight: 500;
+        }
+        
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        button {
+            font-family: inherit;
+            cursor: pointer;
+        }
+        /* ═══════════════════════════════════════════
+   TOPBAR
+═══════════════════════════════════════════ */
+        
+        #topbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--hh);
+            background: color-mix(in srgb, var(--surface) 95%, transparent);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--line2);
+            display: flex;
+            align-items: center;
+            padding: 0 22px 0 0;
+            z-index: 300;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+        
+        .topbar-logo {
+            width: var(--sw);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 0 20px;
+            border-right: 1px solid var(--line);
+        }
+        
+        .logo-mark {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--blue) 0%, var(--cyan) 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(79, 128, 247, 0.2);
+        }
+        
+        .logo-mark svg {
+            width: 16px;
+            height: 16px;
+            fill: none;
+            stroke: #fff;
+            stroke-width: 2.2;
+        }
+        
+        .logo-text {
+            line-height: 1.15;
+            cursor: pointer;
+        }
+        
+        .logo-name {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            font-size: 14.5px;
+            letter-spacing: -.2px;
+        }
+        
+        .logo-tagline {
+            font-size: 10.5px;
+            color: var(--text3);
+            font-weight: 400;
+        }
+        
+        .topbar-center {
+            flex: 1;
+            padding-left: 28px;
+        }
+        
+        .topbar-crumb {
+            font-size: 12px;
+            color: var(--text3);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .topbar-crumb span {
+            color: var(--text2);
+        }
+        
+        .topbar-right {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-left: auto;
+        }
+        
+        .tb-chip {
+            font-size: 11.5px;
+            font-weight: 600;
+            color: var(--cyan);
+            background: var(--cyan-dim);
+            border: 1px solid rgba(34, 211, 238, 0.25);
+            padding: 4px 12px;
+            border-radius: 20px;
+            letter-spacing: .3px;
+        }
+        
+        .tb-btn {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            border: 1px solid var(--line2);
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text2);
+            transition: all .2s cubic-bezier(.4, 0, .2, 1);
+        }
+        
+        .tb-btn:hover {
+            background: var(--surface3);
+            color: var(--text);
+            border-color: var(--line3);
+        }
+        
+        .tb-btn svg {
+            width: 16px;
+            height: 16px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.8;
+        }
+        
+        #hamburger {
+            display: none;
+        }
+        /* ═══════════════════════════════════════════
+   LAYOUT
+═══════════════════════════════════════════ */
+        
+        #shell {
+            display: flex;
+            padding-top: var(--hh);
+            min-height: 100vh;
+        }
+        /* ═══════════════════════════════════════════
+   SIDEBAR
+═══════════════════════════════════════════ */
+        
+        #sidebar {
+            width: var(--sw);
+            flex-shrink: 0;
+            position: fixed;
+            top: var(--hh);
+            bottom: 0;
+            left: 0;
+            background: var(--surface);
+            border-right: 1px solid var(--line);
+            overflow-y: auto;
+            z-index: 200;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.08);
+        }
+        
+        #sidebar::-webkit-scrollbar {
+            width: 3px;
+        }
+        
+        #sidebar::-webkit-scrollbar-thumb {
+            background: var(--line3);
+            border-radius: 3px;
+        }
+        
+        .sb-prog {
+            padding: 18px 18px 14px;
+        }
+        
+        .sb-prog-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .sb-prog-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text3);
+            text-transform: uppercase;
+            letter-spacing: .8px;
+        }
+        
+        .sb-prog-pct {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--blue2);
+        }
+        
+        .sb-prog-track {
+            height: 3px;
+            background: var(--surface3);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .sb-prog-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--blue), var(--cyan));
+            border-radius: 3px;
+            transition: width .5s cubic-bezier(.4, 0, .2, 1);
+        }
+        
+        .sb-sep {
+            height: 1px;
+            background: var(--line);
+            margin: 4px 0;
+        }
+        
+        .sb-group {
+            padding: 12px 0 4px;
+        }
+        
+        .sb-group-label {
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--text3);
+            text-transform: uppercase;
+            letter-spacing: .9px;
+            padding: 0 18px 6px;
+        }
+        
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            padding: 10px 18px;
+            color: var(--text2);
+            font-size: 14px;
+            font-weight: 500;
+            border-left: 2px solid transparent;
+            cursor: pointer;
+            transition: all .2s cubic-bezier(.4, 0, .2, 1);
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: var(--text);
+            background: var(--surface2);
+        }
+        
+        .nav-link.on {
+            color: var(--blue2);
+            background: var(--blue-dim);
+            border-left-color: var(--blue);
+        }
+        
+        .nav-link .ni {
+            width: 30px;
+            height: 30px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--surface3);
+            flex-shrink: 0;
+            transition: background .15s;
+        }
+        
+        .nav-link.on .ni {
+            background: var(--blue-mid);
+        }
+        
+        .nav-link .ni svg {
+            width: 14px;
+            height: 14px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+        }
+        
+        .nav-link .nbadge {
+            margin-left: auto;
+            font-size: 10px;
+            font-weight: 700;
+            background: var(--blue-dim);
+            color: var(--blue2);
+            padding: 2px 7px;
+            border-radius: 10px;
+        }
+        
+        .sb-links {
+            padding: 14px 14px 18px;
+        }
+        
+        .sb-links-title {
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--text3);
+            text-transform: uppercase;
+            letter-spacing: .8px;
+            margin-bottom: 10px;
+            padding-left: 4px;
+        }
+        
+        .ext-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 8px;
+            border-radius: var(--r);
+            color: var(--text2);
+            font-size: 12.5px;
+            font-weight: 500;
+            transition: all .15s;
+        }
+        
+        .ext-link:hover {
+            background: var(--surface2);
+            color: var(--text);
+        }
+        
+        .ext-link svg {
+            width: 13px;
+            height: 13px;
+            flex-shrink: 0;
+            fill: none;
+            stroke: var(--text3);
+            stroke-width: 2;
+        }
+        /* ═══════════════════════════════════════════
+   MAIN
+═══════════════════════════════════════════ */
+        
+        #main {
+            margin-left: var(--sw);
+            flex: 1;
+            min-height: calc(100vh - var(--hh));
+        }
+        
+        .pg {
+            display: none;
+        }
+        
+        .pg.on {
+            display: block;
+        }
+        /* ═══════════════════════════════════════════
+   HERO (HOME)
+═══════════════════════════════════════════ */
+        
+        .hero {
+            position: relative;
+            padding: 72px 60px 56px;
+            border-bottom: 1px solid var(--line);
+            overflow: hidden;
+            background: var(--surface);
+        }
+        
+        .hero-bg {
+            display: none;
+        }
+        
+        .hero-grid {
+            display: none;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 640px;
+        }
+        
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 11.5px;
+            font-weight: 600;
+            color: var(--blue2);
+            background: var(--blue-dim);
+            border: 1px solid var(--blue-ring);
+            padding: 5px 14px;
+            border-radius: 20px;
+            margin-bottom: 22px;
+            letter-spacing: .3px;
+        }
+        
+        .hero-eyebrow::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--blue);
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%,
+            100% {
+                opacity: 1
+            }
+            50% {
+                opacity: .3
+            }
+        }
+        
+        .hero-title {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.8px;
+            margin-bottom: 18px;
+        }
+        
+        .hero-title em {
+            font-style: normal;
+            color: var(--blue2);
+        }
+        
+        .hero-desc {
+            font-size: 16px;
+            color: var(--text2);
+            line-height: 1.75;
+            max-width: 520px;
+            margin-bottom: 32px;
+        }
+        
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: var(--blue);
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: var(--r);
+            font-size: 15px;
+            font-weight: 600;
+            border: none;
+            transition: all .25s cubic-bezier(.4, 0, .2, 1);
+            box-shadow: 0 8px 20px rgba(79, 128, 247, 0.25);
+        }
+        
+        .btn-primary:hover {
+            opacity: 0.92;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(79, 128, 247, 0.32);
+        }
+        
+        .btn-primary svg {
+            width: 15px;
+            height: 15px;
+            fill: none;
+            stroke: #fff;
+            stroke-width: 2.2;
+        }
+        
+        .btn-ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: transparent;
+            color: var(--text2);
+            padding: 12px 24px;
+            border-radius: var(--r);
+            font-size: 15px;
+            font-weight: 600;
+            border: 1.5px solid var(--line3);
+            transition: all .25s cubic-bezier(.4, 0, .2, 1);
+        }
+        
+        .btn-ghost:hover {
+            border-color: var(--text);
+            color: var(--text);
+            background: var(--surface2);
+            transform: translateY(-1px);
+        }
+        
+        .hero-stats {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            margin-top: 40px;
+            padding-top: 32px;
+            border-top: 1px solid var(--line);
+        }
+        
+        .hstat {}
+        
+        .hstat-n {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -.5px;
+        }
+        
+        .hstat-n.c1 {
+            color: var(--blue2);
+        }
+        
+        .hstat-n.c2 {
+            color: var(--cyan);
+        }
+        
+        .hstat-n.c3 {
+            color: var(--green);
+        }
+        
+        .hstat-l {
+            font-size: 11.5px;
+            color: var(--text3);
+            margin-top: 1px;
+        }
+        
+        .hstat-sep {
+            width: 1px;
+            height: 36px;
+            background: var(--line2);
+        }
+        /* ═══════════════════════════════════════════
+   PAGE INNER
+═══════════════════════════════════════════ */
+        
+        .pg-wrap {
+            max-width: 820px;
+            padding: 48px 60px 88px;
+        }
+        
+        .pg-header {
+            margin-bottom: 40px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--line);
+        }
+        
+        .pg-eye {
+            font-size: 10.5px;
+            font-weight: 700;
+            color: var(--blue2);
+            text-transform: uppercase;
+            letter-spacing: .9px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .pg-eye::before {
+            content: '';
+            width: 20px;
+            height: 2px;
+            background: var(--blue);
+            display: inline-block;
+            border-radius: 2px;
+        }
+        
+        .pg-title {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            line-height: 1.15;
+            margin-bottom: 10px;
+        }
+        
+        .pg-desc {
+            color: var(--text2);
+            font-size: 15.5px;
+            line-height: 1.75;
+        }
+        
+        .pg-meta {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-top: 18px;
+        }
+        
+        .ava {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: var(--blue-mid);
+            border: 1.5px solid var(--blue-ring);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--blue2);
+            flex-shrink: 0;
+        }
+        
+        .ava-info {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .ava-name {
+            font-size: 12.5px;
+            font-weight: 600;
+        }
+        
+        .ava-role {
+            font-size: 11.5px;
+            color: var(--text3);
+        }
+        
+        .pg-reading {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 12px;
+            color: var(--text3);
+        }
+        
+        .pg-reading svg {
+            width: 13px;
+            height: 13px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+        }
+        /* ═══════════════════════════════════════════
+   SECTION HEADINGS
+═══════════════════════════════════════════ */
+        
+        .sh {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.4px;
+            margin: 48px 0 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .sh::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--line);
+        }
+        
+        .sh3 {
+            font-size: 15px;
+            font-weight: 600;
+            margin: 24px 0 10px;
+            color: var(--text);
+        }
+        
+        .body-p {
+            color: var(--text2);
+            margin-bottom: 14px;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+        /* ═══════════════════════════════════════════
+   CARDS
+═══════════════════════════════════════════ */
+        
+        .cg {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+        
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--rl);
+            padding: 18px 18px 16px;
+            transition: all .25s cubic-bezier(.4, 0, .2, 1);
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+        
+        .card:hover {
+            border-color: var(--line3);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+        }
+        
+        .card-ico {
+            width: 36px;
+            height: 36px;
+            border-radius: 9px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 14px;
+        }
+        
+        .card-ico svg {
+            width: 17px;
+            height: 17px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.9;
+        }
+        
+        .card-ico.bl {
+            background: var(--blue-dim);
+            color: var(--blue2);
+        }
+        
+        .card-ico.cy {
+            background: var(--cyan-dim);
+            color: var(--cyan);
+        }
+        
+        .card-ico.gr {
+            background: var(--green-dim);
+            color: var(--green);
+        }
+        
+        .card-ico.am {
+            background: var(--amber-dim);
+            color: var(--amber);
+        }
+        
+        .card-ico.vi {
+            background: var(--violet-dim);
+            color: var(--violet);
+        }
+        
+        .card-t {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .card-d {
+            font-size: 13px;
+            color: var(--text2);
+            line-height: 1.6;
+        }
+        
+        .card-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--blue2);
+            margin-top: 10px;
+        }
+        
+        .card-cta svg {
+            width: 11px;
+            height: 11px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2.5;
+        }
+        /* ═══════════════════════════════════════════
+   CALLOUT
+═══════════════════════════════════════════ */
+        
+        .callout {
+            display: flex;
+            gap: 14px;
+            border-radius: var(--rl);
+            padding: 18px 20px;
+            margin: 22px 0;
+            border: 1px solid;
+            background: var(--surface);
+            transition: all .2s;
+        }
+        
+        .callout-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+        
+        .callout-icon svg {
+            width: 16px;
+            height: 16px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2.2;
+        }
+        
+        .callout-body {
+            flex: 1;
+        }
+        
+        .callout-title {
+            font-size: 13.5px;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+        
+        .callout-text {
+            font-size: 13px;
+            line-height: 1.7;
+        }
+        
+        .callout.info {
+            background: var(--blue-dim);
+            border-color: rgba(79, 128, 247, .2);
+        }
+        
+        .callout.info .callout-icon {
+            background: rgba(79, 128, 247, .2);
+            color: var(--blue2);
+        }
+        
+        .callout.info .callout-title {
+            color: var(--blue2);
+        }
+        
+        .callout.info .callout-text {
+            color: var(--text2);
+        }
+        
+        .callout.success {
+            background: var(--green-dim);
+            border-color: rgba(16, 217, 130, .2);
+        }
+        
+        .callout.success .callout-icon {
+            background: rgba(16, 217, 130, .2);
+            color: var(--green);
+        }
+        
+        .callout.success .callout-title {
+            color: var(--green);
+        }
+        
+        .callout.success .callout-text {
+            color: var(--text2);
+        }
+        
+        .callout.warning {
+            background: var(--amber-dim);
+            border-color: rgba(245, 158, 11, .2);
+        }
+        
+        .callout.warning .callout-icon {
+            background: rgba(245, 158, 11, .2);
+            color: var(--amber);
+        }
+        
+        .callout.warning .callout-title {
+            color: var(--amber);
+        }
+        
+        .callout.warning .callout-text {
+            color: var(--text2);
+        }
+        /* ═══════════════════════════════════════════
+   STEPS
+═══════════════════════════════════════════ */
+        
+        .steps {
+            position: relative;
+            padding-left: 0;
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .step {
+            display: flex;
+            gap: 16px;
+            padding: 0 0 28px;
+            position: relative;
+        }
+        
+        .step:last-child {
+            padding-bottom: 0;
+        }
+        
+        .step-left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+        }
+        
+        .step-num {
+            width: 34px;
+            height: 34px;
+            border-radius: 9px;
+            background: var(--surface3);
+            border: 1px solid var(--line2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12.5px;
+            font-weight: 700;
+            color: var(--blue2);
+            flex-shrink: 0;
+            z-index: 1;
+            transition: all .2s cubic-bezier(.4, 0, .2, 1);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+        }
+        
+        .step:hover .step-num {
+            background: var(--blue-mid);
+            border-color: var(--blue-ring);
+            box-shadow: 0 4px 12px rgba(79, 128, 247, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .step-line {
+            width: 1px;
+            flex: 1;
+            background: var(--line2);
+            margin-top: 4px;
+            min-height: 20px;
+        }
+        
+        .step:last-child .step-line {
+            display: none;
+        }
+        
+        .step-body {
+            flex: 1;
+            padding-top: 6px;
+        }
+        
+        .step-t {
+            font-size: 14.5px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .step-d {
+            font-size: 13.5px;
+            color: var(--text2);
+            line-height: 1.7;
+        }
+        
+        .step-d a {
+            color: var(--blue2);
+            font-weight: 500;
+        }
+        /* ═══════════════════════════════════════════
+   TABLE
+═══════════════════════════════════════════ */
+        
+        .tbl-wrap {
+            overflow-x: auto;
+            margin: 18px 0;
+            border-radius: var(--rl);
+            border: 1px solid var(--line);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13.5px;
+        }
+        
+        thead tr {
+            background: var(--surface2);
+        }
+        
+        th {
+            padding: 11px 16px;
+            text-align: left;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text3);
+            text-transform: uppercase;
+            letter-spacing: .7px;
+            border-bottom: 1px solid var(--line);
+        }
+        
+        td {
+            padding: 12px 16px;
+            color: var(--text2);
+            border-bottom: 1px solid var(--line);
+            vertical-align: top;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        tbody tr:hover td {
+            background: var(--surface2);
+        }
+        
+        td a {
+            color: var(--blue2);
+            font-weight: 500;
+        }
+        
+        td a:hover {
+            text-decoration: underline;
+        }
+        
+        .td-hi {
+            color: var(--text);
+            font-weight: 600;
+        }
+        
+        .td-tag {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 9px;
+            border-radius: 20px;
+        }
+        
+        .td-tag.bl {
+            background: var(--blue-dim);
+            color: var(--blue2);
+        }
+        
+        .td-tag.gr {
+            background: var(--green-dim);
+            color: var(--green);
+        }
+        
+        .td-tag.am {
+            background: var(--amber-dim);
+            color: var(--amber);
+        }
+        /* ═══════════════════════════════════════════
+   CHECKLIST
+═══════════════════════════════════════════ */
+        
+        .cl {
+            list-style: none;
+            margin: 14px 0;
+        }
+        
+        .cl li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 9px 0;
+            border-bottom: 1px solid var(--line);
+            font-size: 14px;
+            color: var(--text2);
+        }
+        
+        .cl li:last-child {
+            border: none;
+        }
+        
+        .cl-check {
+            width: 20px;
+            height: 20px;
+            border-radius: 6px;
+            background: var(--green-dim);
+            border: 1px solid rgba(16, 217, 130, .25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        .cl-check svg {
+            width: 11px;
+            height: 11px;
+            fill: none;
+            stroke: var(--green);
+            stroke-width: 2.8;
+        }
+        /* ═══════════════════════════════════════════
+   COMPARE CARDS
+═══════════════════════════════════════════ */
+        
+        .cmp-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 18px 0;
+        }
+        
+        .cmp-card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--rl);
+            padding: 20px;
+            transition: all .25s cubic-bezier(.4, 0, .2, 1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+        
+        .cmp-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+        
+        .cmp-card.feat {
+            border-color: rgba(79, 128, 247, .35);
+            background: var(--blue-dim);
+            box-shadow: 0 4px 16px rgba(79, 128, 247, 0.15);
+        }
+        
+        .cmp-top-badge {
+            font-size: 10.5px;
+            font-weight: 700;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .cmp-top-badge.bl {
+            color: var(--blue2);
+        }
+        
+        .cmp-top-badge.gr {
+            color: var(--green);
+        }
+        
+        .cmp-top-badge.am {
+            color: var(--amber);
+        }
+        
+        .cmp-name {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 3px;
+        }
+        
+        .cmp-sub {
+            font-size: 12.5px;
+            color: var(--text3);
+            margin-bottom: 14px;
+        }
+        
+        .pclist {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+        
+        .pci {
+            display: flex;
+            align-items: flex-start;
+            gap: 7px;
+            font-size: 13px;
+            color: var(--text2);
+        }
+        
+        .pci.p::before {
+            content: '✓';
+            color: var(--green);
+            font-weight: 800;
+            flex-shrink: 0;
+            font-size: 12px;
+        }
+        
+        .pci.c::before {
+            content: '×';
+            color: var(--rose);
+            font-weight: 800;
+            flex-shrink: 0;
+            font-size: 14px;
+            line-height: 1.3;
+        }
+        
+        .cmp-ext {
+            display: block;
+            margin-top: 14px;
+            font-size: 12.5px;
+            font-weight: 600;
+            color: var(--blue2);
+        }
+        /* ═══════════════════════════════════════════
+   SCHOLARSHIP CARDS
+═══════════════════════════════════════════ */
+        
+        .sg {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 16px 0;
+        }
+        
+        .sc {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--rl);
+            padding: 20px 22px;
+            transition: all .25s cubic-bezier(.4, 0, .2, 1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+        
+        .sc:hover {
+            border-color: var(--line3);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .sc-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+        
+        .sc-name {
+            font-size: 15.5px;
+            font-weight: 700;
+        }
+        
+        .sc-sub {
+            font-size: 12.5px;
+            color: var(--text3);
+            margin-top: 2px;
+        }
+        
+        .badge {
+            display: inline-block;
+            font-size: 10.5px;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+        
+        .b-bl {
+            background: var(--blue-dim);
+            color: var(--blue2);
+            border: 1px solid rgba(79, 128, 247, .2);
+        }
+        
+        .b-gr {
+            background: var(--green-dim);
+            color: var(--green);
+            border: 1px solid rgba(16, 217, 130, .2);
+        }
+        
+        .b-am {
+            background: var(--amber-dim);
+            color: var(--amber);
+            border: 1px solid rgba(245, 158, 11, .2);
+        }
+        
+        .b-cy {
+            background: var(--cyan-dim);
+            color: var(--cyan);
+            border: 1px solid rgba(34, 211, 238, .2);
+        }
+        
+        .sc-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 12px;
+        }
+        
+        .sc-perks {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .sc-perk {
+            font-size: 12.5px;
+            color: var(--text2);
+            background: var(--surface2);
+            border: 1px solid var(--line);
+            border-radius: var(--r);
+            padding: 5px 11px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .sc-perk::before {
+            content: '✦';
+            color: var(--blue);
+            font-size: 9px;
+        }
+        
+        .sc-link {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 12.5px;
+            font-weight: 600;
+            color: var(--blue2);
+        }
+        /* ═══════════════════════════════════════════
+   BLOG
+═══════════════════════════════════════════ */
+        
+        .bg {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 16px;
+            margin: 18px 0;
+        }
+        
+        .bc {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--rl);
+            overflow: hidden;
+            cursor: pointer;
+            transition: all .25s cubic-bezier(.4, 0, .2, 1);
+        }
+        
+        .bc:hover {
+            border-color: var(--line3);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+        }
+        
+        .bc-thumb {
+            height: 130px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 44px;
+            border-bottom: 1px solid var(--line);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .bc-thumb.bl {
+            background: var(--blue-dim);
+        }
+        
+        .bc-thumb.gr {
+            background: var(--green-dim);
+        }
+        
+        .bc-thumb.am {
+            background: var(--amber-dim);
+        }
+        
+        .bc-thumb.ro {
+            background: var(--rose-dim);
+        }
+        
+        .bc-thumb::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 60%, rgba(8, 11, 18, .4));
+        }
+        
+        .bc-body {
+            padding: 16px 18px;
+        }
+        
+        .bc-tag {
+            font-size: 10.5px;
+            font-weight: 700;
+            color: var(--blue2);
+            text-transform: uppercase;
+            letter-spacing: .6px;
+            margin-bottom: 7px;
+        }
+        
+        .bc-title {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+        
+        .bc-excerpt {
+            font-size: 12.5px;
+            color: var(--text2);
+            line-height: 1.65;
+            margin-bottom: 12px;
+        }
+        
+        .bc-foot {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11.5px;
+            color: var(--text3);
+        }
+        
+        .upload-zone {
+            border: 2px dashed var(--line2);
+            border-radius: var(--rxl);
+            padding: 44px 28px;
+            text-align: center;
+            cursor: pointer;
+            transition: all .25s;
+            margin: 22px 0;
+            background: var(--surface);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .upload-zone::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 60% 80% at 50% 100%, var(--blue-dim), transparent);
+            pointer-events: none;
+        }
+        
+        .upload-zone:hover {
+            border-color: var(--blue-ring);
+            background: var(--blue-dim);
+        }
+        
+        .uz-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            background: var(--blue-mid);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+        }
+        
+        .uz-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: none;
+            stroke: var(--blue2);
+            stroke-width: 1.8;
+        }
+        
+        .uz-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        
+        .uz-desc {
+            font-size: 13.5px;
+            color: var(--text2);
+            margin-bottom: 18px;
+        }
+        
+        .uz-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: var(--blue);
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: var(--r);
+            font-size: 13.5px;
+            font-weight: 600;
+            border: none;
+            transition: opacity .18s;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .uz-btn:hover {
+            opacity: .85;
+        }
+        
+        .uz-btn svg {
+            width: 15px;
+            height: 15px;
+            fill: none;
+            stroke: #fff;
+            stroke-width: 2.2;
+        }
+        
+        .community {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 14px 0;
+        }
+        
+        .cp {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--rl);
+            padding: 12px 16px;
+            cursor: pointer;
+            transition: all .2s cubic-bezier(.4, 0, .2, 1);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+        }
+        
+        .cp:hover {
+            border-color: var(--line3);
+            background: var(--surface2);
+            transform: translateX(2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .cp-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        
+        .cp-name {
+            font-size: 13.5px;
+            font-weight: 600;
+        }
+        
+        .cp-meta {
+            font-size: 12px;
+            color: var(--text3);
+            margin-top: 1px;
+        }
+        
+        .cp-arr {
+            margin-left: auto;
+            color: var(--text3);
+        }
+        
+        .cp-arr svg {
+            width: 15px;
+            height: 15px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+        }
+        /* ═══════════════════════════════════════════
+   UPLOAD SUCCESS
+═══════════════════════════════════════════ */
+        
+        #upload-success {
+            display: none;
+            align-items: center;
+            gap: 12px;
+            background: var(--green-dim);
+            border: 1px solid rgba(16, 217, 130, .25);
+            border-radius: var(--rl);
+            padding: 14px 18px;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        
+        #upload-success svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            fill: none;
+            stroke: var(--green);
+            stroke-width: 2;
+        }
+        /* ═══════════════════════════════════════════
+   FINAL CHECKLIST SECTION
+═══════════════════════════════════════════ */
+        
+        .final-cl {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 16px 0;
+        }
+        
+        .fcl-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--r);
+            padding: 10px 14px;
+            font-size: 13.5px;
+        }
+        
+        .fcl-check {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--blue-mid);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .fcl-check svg {
+            width: 11px;
+            height: 11px;
+            fill: none;
+            stroke: var(--blue2);
+            stroke-width: 2.5;
+        }
+        /* ═══════════════════════════════════════════
+   HOME SECTION GRID
+═══════════════════════════════════════════ */
+        
+        .home-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            border: 1px solid var(--line);
+            border-radius: var(--rxl);
+            overflow: hidden;
+            margin: 24px 0;
+        }
+        
+        .hg-item {
+            padding: 22px 22px 20px;
+            border-right: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            cursor: pointer;
+            transition: all .25s cubic-bezier(.4, 0, .2, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+        }
+        
+        .hg-item:hover {
+            background: var(--surface2);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .hg-item:nth-child(3n) {
+            border-right: none;
+        }
+        
+        .hg-item:nth-last-child(-n+3) {
+            border-bottom: none;
+        }
+        
+        .hg-num {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text3);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .hg-dot {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+        }
+        
+        .hg-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+        }
+        
+        .hg-icon svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.8;
+        }
+        
+        .hg-t {
+            font-size: 14.5px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .hg-d {
+            font-size: 12.5px;
+            color: var(--text2);
+            line-height: 1.55;
+        }
+        
+        .hg-arrow {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            opacity: 0;
+            transition: opacity .18s;
+            color: var(--text3);
+        }
+        
+        .hg-item:hover .hg-arrow {
+            opacity: 1;
+        }
+        
+        .hg-arrow svg {
+            width: 14px;
+            height: 14px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+        }
+        /* ═══════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════ */
+        
+        @media(max-width:900px) {
+             :root {
+                --sw: 0px;
+            }
+            #sidebar {
+                transform: translateX(-272px);
+                width: 272px;
+                transition: transform .3s cubic-bezier(.4, 0, .2, 1);
+                box-shadow: 4px 0 16px rgba(0, 0, 0, 0.15);
+            }
+            #sidebar.open {
+                transform: translateX(0);
+            }
+            #main {
+                margin-left: 0;
+            }
+            #hamburger {
+                display: flex;
+            }
+            .topbar-logo {
+                width: auto;
+                border-right: none;
+            }
+            .hero {
+                padding: 48px 28px 40px;
+            }
+            .hero-title {
+                font-size: 32px;
+                line-height: 1.2;
+            }
+            .hero-desc {
+                font-size: 15px;
+            }
+            .hero-stats {
+                gap: 18px;
+                margin-top: 36px;
+                padding-top: 28px;
+            }
+            .btn-primary,
+            .btn-ghost {
+                padding: 11px 20px;
+                font-size: 14px;
+            }
+            .pg-wrap {
+                padding: 40px 24px 68px;
+            }
+            .cmp-grid {
+                grid-template-columns: 1fr;
+            }
+            .bg {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+            .home-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .hg-item {
+                padding: 20px 18px 18px;
+            }
+            .hg-item:nth-child(2n) {
+                border-right: none;
+            }
+            .hg-item:nth-child(3n) {
+                border-right: 1px solid var(--line);
+            }
+            .final-cl {
+                grid-template-columns: 1fr;
+            }
+            .card {
+                padding: 16px;
+            }
+            .sc {
+                padding: 18px 20px;
+            }
+            .tb-chip {
+                font-size: 10px;
+                padding: 3px 10px;
+            }
+        }
+        
+        @media(max-width:600px) {
+             :root {
+                --hh: 56px;
+            }
+            .hero {
+                padding: 40px 20px 36px;
+                border-bottom: none;
+            }
+            .hero-title {
+                font-size: 28px;
+                line-height: 1.15;
+                margin-bottom: 16px;
+            }
+            .hero-desc {
+                font-size: 14px;
+                margin-bottom: 24px;
+            }
+            .hero-stats {
+                flex-direction: column;
+                gap: 12px;
+                margin-top: 28px;
+                padding-top: 24px;
+            }
+            .hstat-sep {
+                display: none;
+            }
+            .hstat {
+                padding: 8px 0;
+            }
+            .hero-actions {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .btn-primary,
+            .btn-ghost {
+                width: 100%;
+                justify-content: center;
+                padding: 12px 16px;
+                font-size: 15px;
+            }
+            .home-grid {
+                grid-template-columns: 1fr;
+                border-radius: var(--r);
+                margin: 20px 0;
+            }
+            .hg-item {
+                padding: 18px 16px 16px;
+                border-right: none!important;
+                border-bottom: 1px solid var(--line);
+                min-height: 140px;
+            }
+            .hg-item:last-child {
+                border-bottom: none;
+            }
+            .hg-num {
+                margin-bottom: 10px;
+                font-size: 10px;
+            }
+            .hg-icon {
+                width: 34px;
+                height: 34px;
+                margin-bottom: 10px;
+            }
+            .hg-t {
+                font-size: 13.5px;
+                font-weight: 700;
+            }
+            .hg-d {
+                font-size: 12px;
+            }
+            .hg-arrow {
+                display: none;
+            }
+            .pg-wrap {
+                padding: 32px 18px 54px;
+                max-width: 100%;
+            }
+            .pg-title {
+                font-size: 26px;
+                line-height: 1.2;
+            }
+            .pg-desc {
+                font-size: 14px;
+            }
+            .sh {
+                font-size: 18px;
+                margin: 40px 0 16px;
+            }
+            .sh3 {
+                font-size: 14px;
+            }
+            .card {
+                padding: 14px;
+            }
+            .card-t {
+                font-size: 13px;
+            }
+            .card-d {
+                font-size: 12px;
+            }
+            .sc {
+                padding: 16px 18px;
+            }
+            .cg {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            .cmp-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            .cmp-card {
+                padding: 16px;
+            }
+            .bg {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            .bc-thumb {
+                height: 160px;
+                font-size: 48px;
+            }
+            .bc-body {
+                padding: 14px 16px;
+            }
+            .tbl-wrap {
+                border-radius: var(--r);
+                overflow-x: auto;
+            }
+            table {
+                font-size: 13px;
+            }
+            .th {
+                font-size: 10px;
+                padding: 10px 12px;
+            }
+            .td {
+                padding: 10px 12px;
+            }
+            .step {
+                gap: 12px;
+                padding: 0 0 24px;
+            }
+            .step-num {
+                width: 30px;
+                height: 30px;
+                font-size: 11px;
+            }
+            .step-t {
+                font-size: 13px;
+            }
+            .step-d {
+                font-size: 12px;
+            }
+            .final-cl {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+            .fcl-item {
+                padding: 9px 12px;
+                font-size: 12px;
+            }
+            .topbar-crumb {
+                font-size: 11px;
+                display: none;
+            }
+            .tb-chip {
+                display: none;
+            }
+            .callout {
+                padding: 16px 18px;
+                margin: 18px 0;
+                gap: 12px;
+            }
+            .callout-icon {
+                width: 28px;
+                height: 28px;
+            }
+            .callout-icon svg {
+                width: 14px;
+                height: 14px;
+            }
+            .callout-title {
+                font-size: 12px;
+            }
+            .callout-text {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ══════ TOPBAR ══════ -->
+    <header id="topbar">
+        <div class="topbar-logo">
+            <button id="hamburger" class="tb-btn" onclick="toggleSidebar()" aria-label="Menu">
+      <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+            <div class="logo-mark">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <a class="logo-text" href="#" onclick="return goPage('home','Overview')" aria-label="Go to overview">
+                <div class="logo-name">Study Abroad</div>
+                <div class="logo-tagline">Germany Edition</div>
+            </a>
+        </div>
+        <div class="topbar-center">
+            <div class="topbar-crumb" id="breadcrumb">
+                Guide <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg> <span>Overview</span>
+            </div>
+        </div>
+        <div class="topbar-right">
+            <span class="tb-chip">🇩🇪 Complete Guide</span>
+            <button class="tb-btn" id="theme-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+      <svg id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      <svg id="i-moon" viewBox="0 0 24 24" style="display:none"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+    </button>
+        </div>
+    </header>
+
+    <!-- ══════ SHELL ══════ -->
+    <div id="shell">
+
+        <!-- ══════ SIDEBAR ══════ -->
+        <nav id="sidebar" role="navigation" aria-label="Section navigation">
+            <div class="sb-prog">
+                <div class="sb-prog-head">
+                    <span class="sb-prog-label">Reading Progress</span>
+                    <span class="sb-prog-pct" id="pct-label">12%</span>
+                </div>
+                <div class="sb-prog-track">
+                    <div class="sb-prog-fill" id="prog-fill" style="width:12%"></div>
+                </div>
+            </div>
+            <div class="sb-sep"></div>
+
+            <div class="sb-group">
+                <div class="sb-group-label">Start Here</div>
+                <a class="nav-link on" onclick="goPage('home','Overview')" href="#">
+                    <span class="ni"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span> Overview
+                </a>
+                <a class="nav-link" onclick="goPage('process','Application Steps')" href="#">
+                    <span class="ni"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span> Application Process
+                    <span class="nbadge">13</span>
+                </a>
+            </div>
+
+            <div class="sb-group">
+                <div class="sb-group-label">Paperwork</div>
+                <a class="nav-link" onclick="goPage('dmat','dMAT Guide')" href="#">
+                    <span class="ni"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M8.5 8.5a5 5 0 017 7"/><path d="M14 10.5l-4 4"/><path d="M12 7.5v1.5"/></svg></span> dMAT Guide
+                </a>
+                <a class="nav-link" onclick="goPage('visa','Visa Guide')" href="#">
+                    <span class="ni"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></span> Visa Guide
+                </a>
+                <a class="nav-link" onclick="goPage('finance','Blocked Accounts')" href="#">
+                    <span class="ni"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></span> Blocked Accounts
+                </a>
+            </div>
+
+            <div class="sb-group">
+                <div class="sb-group-label">Academics</div>
+                <a class="nav-link" onclick="goPage('universities','Universities')" href="#">
+                    <span class="ni"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></span> Universities
+                </a>
+                <a class="nav-link" onclick="goPage('scholarships','Scholarships')" href="#">
+                    <span class="ni"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span> Scholarships
+                </a>
+            </div>
+
+            <div class="sb-group">
+                <div class="sb-group-label">Life & Work</div>
+                <a class="nav-link" onclick="goPage('jobs','Student Jobs')" href="#">
+                    <span class="ni"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></span> Student Jobs
+                </a>
+                <a class="nav-link" onclick="goPage('blog','Blog')" href="#">
+                    <span class="ni"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg></span> Blog & Resources
+                </a>
+            </div>
+
+            <div class="sb-sep" style="margin-top:auto"></div>
+            <div class="sb-links">
+                <div class="sb-links-title">Official Links</div>
+                <a href="https://www.daad.de/en/" target="_blank" class="ext-link">
+                    <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> DAAD Germany
+                </a>
+                <a href="https://aps-india.de/" target="_blank" class="ext-link">
+                    <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> APS India Portal
+                </a>
+                <a href="https://digital.diplo.de/visa" target="_blank" class="ext-link">
+                    <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> CSP Visa Portal
+                </a>
+                <a href="https://www.hochschulkompass.de/" target="_blank" class="ext-link">
+                    <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Hochschulkompass
+                </a>
+            </div>
+        </nav>
+
+        <!-- ══════ MAIN ══════ -->
+        <main id="main">
+
+            <!-- ════════════════════════════════════
+     HOME
+════════════════════════════════════ -->
+            <div id="pg-home" class="pg on">
+                <div class="hero">
+                    <div class="hero-content">
+                        <div class="hero-eyebrow">Master Your Germany Study Journey</div>
+                        <h1 class="hero-title">Your roadmap to<br>studying in <em>Germany</em></h1>
+                        <p class="hero-desc">Everything from APS certificates to Werkstudent jobs—organized, verified, and built for Indian students navigating Germany's academic system.</p>
+                        <div class="callout info" style="margin:0 0 24px;">
+                            <div class="callout-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+                            <div class="callout-body">
+                                <div class="callout-title">2026 update: dMAT may apply</div>
+                                <div class="callout-text">Some Indian Master's applicants in listed fields now need the Digital Master Assessment Test (dMAT) in addition to APS. Check the official APS India guidance before you register.</div>
+                            </div>
+                        </div>
+                        <div class="hero-actions">
+                            <button class="btn-primary" onclick="goPage('process','Application Steps')">
+          Start with the process
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+                            <button class="btn-ghost" onclick="goPage('visa','Visa Guide')">Visa guide</button>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="hstat">
+                                <div class="hstat-n c1">13</div>
+                                <div class="hstat-l">Application steps</div>
+                            </div>
+                            <div class="hstat-sep"></div>
+                            <div class="hstat">
+                                <div class="hstat-n c2">7+</div>
+                                <div class="hstat-l">Scholarship programs</div>
+                            </div>
+                            <div class="hstat-sep"></div>
+                            <div class="hstat">
+                                <div class="hstat-n c3">400+</div>
+                                <div class="hstat-l">German universities</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pg-wrap" style="max-width:100%;padding:40px 60px 80px;">
+                    <div class="sh">Quick navigation</div>
+                    <div class="home-grid">
+                        <div class="hg-item" onclick="goPage('process','Application Steps')">
+                            <div class="hg-num"><span class="hg-dot" style="background:var(--blue)"></span>01</div>
+                            <div class="hg-icon bl"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+                            <div class="hg-t">Application Process</div>
+                            <div class="hg-d">13-step walkthrough from APS to enrollment</div>
+                            <div class="hg-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+                        </div>
+                        <div class="hg-item" onclick="goPage('visa','Visa Guide')">
+                            <div class="hg-num"><span class="hg-dot" style="background:var(--cyan)"></span>02</div>
+                            <div class="hg-icon cy"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
+                            <div class="hg-t">Visa Guide</div>
+                            <div class="hg-d">CSP portal, documents &amp; biometrics</div>
+                            <div class="hg-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+                        </div>
+                        <div class="hg-item" onclick="goPage('dmat','dMAT Guide')">
+                            <div class="hg-num"><span class="hg-dot" style="background:var(--violet)"></span>03</div>
+                            <div class="hg-icon vi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M8.5 8.5a5 5 0 017 7"/><path d="M14 10.5l-4 4"/><path d="M12 7.5v1.5"/></svg></div>
+                            <div class="hg-t">dMAT Guide</div>
+                            <div class="hg-d">Eligibility, syllabus, scores &amp; test centers</div>
+                            <div class="hg-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+                        </div>
+                        <div class="hg-item" onclick="goPage('universities','Universities')">
+                            <div class="hg-num"><span class="hg-dot" style="background:var(--green)"></span>04</div>
+                            <div class="hg-icon gr"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
+                            <div class="hg-t">Universities</div>
+                            <div class="hg-d">TU vs FH vs Private—make the right call</div>
+                            <div class="hg-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+                        </div>
+                        <div class="hg-item" onclick="goPage('finance','Blocked Accounts')">
+                            <div class="hg-num"><span class="hg-dot" style="background:var(--amber)"></span>05</div>
+                            <div class="hg-icon am"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+                            <div class="hg-t">Blocked Accounts</div>
+                            <div class="hg-d">Expatrio vs Fintiba vs Coracle compared</div>
+                            <div class="hg-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+                        </div>
+                        <div class="hg-item" onclick="goPage('scholarships','Scholarships')">
+                            <div class="hg-num"><span class="hg-dot" style="background:var(--violet)"></span>06</div>
+                            <div class="hg-icon vi"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                            <div class="hg-t">Scholarships</div>
+                            <div class="hg-d">DAAD, Deutschlandstipendium &amp; 5 more</div>
+                            <div class="hg-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+                        </div>
+                        <div class="hg-item" onclick="goPage('jobs','Student Jobs')">
+                            <div class="hg-num"><span class="hg-dot" style="background:var(--rose)"></span>07</div>
+                            <div class="hg-icon" style="background:var(--rose-dim);color:var(--rose)"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+                            <div class="hg-t">Student Jobs</div>
+                            <div class="hg-d">Werkstudent salaries, portals &amp; strategy</div>
+                            <div class="hg-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+                        </div>
+                    </div>
+
+                    <div class="sh">Housing platforms</div>
+                    <div class="tbl-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Platform</th>
+                                    <th>Best for</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="https://www.wg-gesucht.de" target="_blank">WG-Gesucht</a></td>
+                                    <td>Shared apartments, rooms, short-term stays</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://housinganywhere.com" target="_blank">HousingAnywhere</a></td>
+                                    <td>Verified furnished rooms—book before arrival</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://www.immobilienscout24.de" target="_blank">Immobilienscout24</a></td>
+                                    <td>Germany's largest portal, long-term rentals</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://wunderflats.com" target="_blank">Wunderflats</a></td>
+                                    <td>Furnished apartments for expats &amp; researchers</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://www.kleinanzeigen.de" target="_blank">Kleinanzeigen</a></td>
+                                    <td>Classifieds—apartments, furniture, second-hand</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="callout info" style="margin-top:20px;">
+                        <div class="callout-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+                        <div class="callout-body">
+                            <div class="callout-title">Start early</div>
+                            <div class="callout-text">Begin your accommodation search 3–4 months before semester starts. WG-Gesucht and HousingAnywhere are the most beginner-friendly for non-German speakers.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ════════════════════════════════════
+     APPLICATION PROCESS
+════════════════════════════════════ -->
+            <div id="pg-process" class="pg">
+                <div class="pg-wrap">
+                    <div class="pg-header">
+                        <div class="pg-eye">Step by step</div>
+                        <h1 class="pg-title">Application Process</h1>
+                        <p class="pg-desc">A complete, ordered walkthrough—from APS certification to German university enrollment.</p>
+                        <div class="pg-meta">
+                            <div class="ava">SP</div>
+                            <div class="ava-info"><span class="ava-name">Study Abroad Editorial</span><span class="ava-role">Verified by students at TU Munich &amp; RWTH</span></div>
+                            <div class="pg-reading"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 12 min read</div>
+                        </div>
+                    </div>
+
+                    <ul class="steps">
+                        <li class="step">
+                            <div class="step-left">
+                                <div class="step-num">01</div>
+                                <div class="step-line"></div>
+                            </div>
+                            <div class="step-body">
+                                <div class="step-t">Apply for the APS Certificate</div>
+                                <div class="step-d">Mandatory for most students from India. Start as early as possible—it can take several weeks. Visit <a href="https://aps-india.de" target="_blank">aps-india.de</a>.</div>
+                            </div>
+                        </li>
+                        <li class="step">
+                            <div class="step-left">
+                                <div class="step-num">01A</div>
+                                <div class="step-line"></div>
+                            </div>
+                            <div class="step-body">
+                                <div class="step-t">Check whether dMAT is required</div>
+                                <div class="step-d">If you are applying for a Master's in Germany and your background falls under the APS India affected fields, you may need to take dMAT before APS verification. Confirm your exact eligibility on <a href="https://aps-india.de/dmat/"
+                                        target="_blank">APS India</a> or <a href="https://www.d-mat.de/en/" target="_blank">d-mat.de</a>.</div>
+                            </div>
+                        </li>
+                        <li class="step">
+                            <div class="step-left">
+                                <div class="step-num">02</div>
+                                <div class="step-line"></div>
+                            </div>
+                            <div class="step-body">
+                                <div class="step-t">Research Universities &amp; Deadlines</div>
+                                <div class="step-d">Germany has Summer and Winter intakes. Use the <a href="https://www.daad.de/en/" target="_blank">DAAD portal</a> to filter programs by subject, language, and fees. Eligibility varies per university—check each carefully.</div>
+                            </div>
+                        </li>
+                        <li class="step">
+                            <div class="step-left">
+                                <div class="step-num">03</div>
+                                <div class="step-line"></div>
+                            </div>
+                            <div class="step-body">
+                                <div class="step-t">Check Admission Requirements</div>
+                                <div class="step-d">Review required bachelor's credits and subjects, IELTS/TOEFL scores, GRE requirements, and any program-specific entrance exams.</div>
+                            </div>
+                        </li>
+                        <li class="step">
+                            <div class="step-left">
+                                <div class="step-num">04</div>
+                                <div class="step-line"></div>
+                            </div>
+                            <div class="step-body">
+                                <div class="step-t">Prepare Required Documents</div>
+                                <div class="step-d">APS Certificate · Academic transcripts &amp; degree · IELTS/TOEFL/GRE scores · Letters of Recommendation · Statement of Purpose · German-style CV · Passport.</div>
+                            </div>
+                        </li>
+                        <li class="step">
+                            <div class="step-left">
+                                <div class="step-num">05</div>
+                                <div class="step-line"></div>
+                            </div>
+                            <div class="step-body">
+                                <div class="step-t">Apply via Uni-Assist or Direct Portals</div>
+                                <div class="step-d">Most universities use Uni-Assist. Fees: ~€75 for the first university, ~€30 each additional. Some require certified documents by courier—check deadlines meticulously.</div>
+                            </div>
+                        </li>
+                        <li class="step">
+                            <div class="step-left">
+                                <div class="step-num">06</div>
+                                <div class="step-line"></div>
+                            </div>
+                            <div class="step-body">
+                                <div class="step-t">Monitor Application Status</div>
+                                <div class="step-d">Check email frequently. Send a polite inquiry after the expected review period if you haven't heard back.</div>
+                            </div>
+                        </li>
+                        <li class="step">
+                            <div class="step-left">
+                                <div class="step-num">07</div>
+                                <div class="step-line"></div>
+                            </div>
+                            <div class="step-body">
+                                <div class="step-t">Complete University Enrollment</div>
+                                <div class="step-d">Follow all enrollment instructions immediately upon receiving your offer. Submit any additional documents promptly.</div>
+                            </div>
+                        </li>
+                        <li class="step">
+                            <div class="step-left">
+                                <div class="step-num">08</div>
+                                <div class="step-line"></div>
+                            </div>
+                            <div class="step-body">
+                                <div class="step-t">Arrange Financial Proof &amp; Health Insurance</div>
+                                <div class="step-d">Open a blocked account (Expatrio, Coracle, or Fintiba) and arrange German health insurance. Then pay the semester contribution fee and finalize enrollment.</div>
+                            </div>
+                        </li>
+                        <li class="step">
+                            <div class="step-left">
+                                <div class="step-num">09</div>
+                                <div class="step-line"></div>
+                            </div>
+                            <div class="step-body">
+                                <div class="step-t">Start the Visa Process via CSP Portal</div>
+                                <div class="step-d">Complete your application at <a href="https://digital.diplo.de/visa" target="_blank">digital.diplo.de/visa</a>. Upload passport, admission letter, APS certificate, blocked account confirmation, and health insurance.</div>
+                            </div>
+                        </li>
+                        <li class="step">
+                            <div class="step-left">
+                                <div class="step-num">10</div>
+                                <div class="step-line"></div>
+                            </div>
+                            <div class="step-body">
+                                <div class="step-t">Respond to Visa Follow-Ups</div>
+                                <div class="step-d">Monitor email daily. Respond quickly to requests for corrections or missing documents—delays here push back your biometric appointment.</div>
+                            </div>
+                        </li>
+                        <li class="step">
+                            <div class="step-left">
+                                <div class="step-num">11</div>
+                                <div class="step-line"></div>
+                            </div>
+                            <div class="step-body">
+                                <div class="step-t">Attend Biometric Appointment</div>
+                                <div class="step-d">Bring all original documents, official passport photographs, and organized copies of everything. Arrive early.</div>
+                            </div>
+                        </li>
+                        <li class="step">
+                            <div class="step-left">
+                                <div class="step-num">12</div>
+                                <div class="step-line"></div>
+                            </div>
+                            <div class="step-body">
+                                <div class="step-t">Wait for Visa Approval</div>
+                                <div class="step-d">Track your application status. Processing times vary by consulate workload and intake season.</div>
+                            </div>
+                        </li>
+                        <li class="step">
+                            <div class="step-left">
+                                <div class="step-num">13</div>
+                            </div>
+                            <div class="step-body">
+                                <div class="step-t">Prepare for Your Move</div>
+                                <div class="step-d">While waiting: shop for essentials, lock down accommodation, research your city and campus. You're nearly there.</div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="callout warning">
+                        <div class="callout-icon"><svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+                        <div class="callout-body">
+                            <div class="callout-title">Timeline</div>
+                            <div class="callout-text">Begin APS and blocked account setup at least 6 months before your intended semester start. Visa processing alone can take 8–12 weeks at peak intake season.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ════════════════════════════════════
+     DMAT
+════════════════════════════════════ -->
+            <div id="pg-dmat" class="pg">
+                <div class="pg-wrap">
+                    <div class="pg-header">
+                        <div class="pg-eye">2026 APS update</div>
+                        <h1 class="pg-title">dMAT Guide</h1>
+                        <p class="pg-desc">A detailed guide to the Digital Master Assessment Test for Indian Master's applicants in Germany, including eligibility, format, score use, and official timelines.</p>
+                        <div class="pg-meta">
+                            <div class="ava">DM</div>
+                            <div class="ava-info"><span class="ava-name">Study Abroad Editorial</span><span class="ava-role">Built from APS India and d-mat.de guidance</span></div>
+                            <div class="pg-reading"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 10 min read</div>
+                        </div>
+                    </div>
+
+                    <div class="callout info">
+                        <div class="callout-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+                        <div class="callout-body">
+                            <div class="callout-title">What dMAT is</div>
+                            <div class="callout-text">The Digital Master Assessment Test is an aptitude-based assessment introduced by APS India together with g.a.s.t. for selected Indian applicants. It does not replace APS; for some candidates it becomes an additional step in
+                                the APS process.</div>
+                        </div>
+                    </div>
+
+                    <div class="sh">Who needs dMAT</div>
+                    <div class="cg">
+                        <div class="card">
+                            <div class="card-ico am"><svg viewBox="0 0 24 24"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 7v10"/><path d="M7.5 9.5l9 5"/></svg></div>
+                            <div class="card-t">Usually required</div>
+                            <div class="card-d">Indian students applying for Master's programs in Germany when the bachelor's background falls under the affected fields list, especially engineering, commerce, accounting, finance, economics, business, and management.</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-ico gr"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/><path d="M4 12a8 8 0 1116 0 8 8 0 01-16 0z"/></svg></div>
+                            <div class="card-t">Usually not required</div>
+                            <div class="card-d">Bachelor's applicants, PhD applicants, Winter Semester 2026/27 applicants, exchange or double-degree applicants, and applicants who finished APS registration or submitted complete APS documents before 29 June 2026.</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-ico vi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M8.5 8.5a5 5 0 017 7"/><path d="M14 10.5l-4 4"/><path d="M12 7.5v1.5"/></svg></div>
+                            <div class="card-t">Computer Science note</div>
+                            <div class="card-d">If your Computer Science degree is classified as Engineering, you are generally in scope. For interdisciplinary degrees, the official APS affected-fields list decides the final answer.</div>
+                        </div>
+                    </div>
+
+                    <div class="sh">How the process works</div>
+                    <ul class="steps">
+                        <li class="step">
+                            <div class="step-left">
+                                <div class="step-num">01</div>
+                                <div class="step-line"></div>
+                            </div>
+                            <div class="step-body">
+                                <div class="step-t">Register for APS</div>
+                                <div class="step-d">Start with APS India. Your registration date and document submission timeline decide whether dMAT is part of your case.</div>
+                            </div>
+                        </li>
+                        <li class="step">
+                            <div class="step-left">
+                                <div class="step-num">02</div>
+                                <div class="step-line"></div>
+                            </div>
+                            <div class="step-body">
+                                <div class="step-t">Check if dMAT is mandatory</div>
+                                <div class="step-d">Review the official affected-fields list and your APS timeline. If your case falls under the new rules, you complete dMAT before APS verification continues.</div>
+                            </div>
+                        </li>
+                        <li class="step">
+                            <div class="step-left">
+                                <div class="step-num">03</div>
+                                <div class="step-line"></div>
+                            </div>
+                            <div class="step-body">
+                                <div class="step-t">Take the digital exam</div>
+                                <div class="step-d">The test is computer-based, in English, and administered at authorized centers in India. You receive a dMAT certificate after results are released.</div>
+                            </div>
+                        </li>
+                        <li class="step">
+                            <div class="step-left">
+                                <div class="step-num">04</div>
+                                <div class="step-line"></div>
+                            </div>
+                            <div class="step-body">
+                                <div class="step-t">Submit APS documents</div>
+                                <div class="step-d">APS verification still happens as before. dMAT is an added requirement for selected applicants, not a replacement for document verification.</div>
+                            </div>
+                        </li>
+                        <li class="step">
+                            <div class="step-left">
+                                <div class="step-num">05</div>
+                            </div>
+                            <div class="step-body">
+                                <div class="step-t">Use the certificate for admissions</div>
+                                <div class="step-d">German universities may consider the score during admissions. Keep the certificate with your APS documents and application files.</div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="sh">Exam structure</div>
+                    <div class="cg">
+                        <div class="card">
+                            <div class="card-ico bl"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h16"/></svg></div>
+                            <div class="card-t">Core Module</div>
+                            <div class="card-d">Measures logical reasoning, analytical thinking, pattern recognition, and problem solving. It is designed to test general cognitive ability, not memorized facts.</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-ico cy"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h12M3 18h18"/></svg></div>
+                            <div class="card-t">General Academic Module</div>
+                            <div class="card-d">Evaluates how well you apply academic knowledge to solve problems. The emphasis is on reasoning and application rather than rote learning.</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-ico gr"><svg viewBox="0 0 24 24"><path d="M4 19h16M6 15l3-6 4 4 5-8"/></svg></div>
+                            <div class="card-t">Question style</div>
+                            <div class="card-d">Computer-based multiple-choice questions with one correct answer, delivered in English at authorized test centers in India.</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-ico am"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div>
+                            <div class="card-t">Duration</div>
+                            <div class="card-d">Approximately 3.5 hours, including a break between modules.</div>
+                        </div>
+                    </div>
+
+                    <div class="sh">Scoring and validity</div>
+                    <div class="cmp-grid">
+                        <div class="cmp-card feat">
+                            <div class="cmp-top-badge bl">Score</div>
+                            <div class="cmp-name">0 to 200 scale</div>
+                            <div class="cmp-sub">Certificates include percentile rank, overall score, module scores, and the dMAT score. The average score is 100.</div>
+                            <div class="pclist">
+                                <div class="pci p">No pass/fail cutoff is stated for the dMAT score in the APS process.</div>
+                                <div class="pci p">Universities decide how much weight to give the result.</div>
+                                <div class="pci p">A low result does not automatically block APS verification.</div>
+                            </div>
+                        </div>
+                        <div class="cmp-card">
+                            <div class="cmp-top-badge gr">Validity</div>
+                            <div class="cmp-name">Indefinite</div>
+                            <div class="cmp-sub">The official dMAT site states the certificate is valid indefinitely.</div>
+                            <div class="pclist">
+                                <div class="pci p">Keep the certificate safe with your APS records.</div>
+                                <div class="pci p">Use it again for later applications if a university requests it.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sh">Important dates</div>
+                    <div class="tbl-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Event</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="td-hi">Registration opens</td>
+                                    <td>29 June 2026</td>
+                                </tr>
+                                <tr>
+                                    <td class="td-hi">Registration deadline</td>
+                                    <td>15 September 2026</td>
+                                </tr>
+                                <tr>
+                                    <td class="td-hi">Exam date</td>
+                                    <td>26 September 2026</td>
+                                </tr>
+                                <tr>
+                                    <td class="td-hi">Results published</td>
+                                    <td>12 October 2026</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sh">Test centers in India</div>
+                    <div class="cg">
+                        <div class="card">
+                            <div class="card-t">Ahmedabad</div>
+                            <div class="card-d">Planned center shown during registration.</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-t">Bengaluru</div>
+                            <div class="card-d">Planned center shown during registration.</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-t">Bhopal</div>
+                            <div class="card-d">Planned center shown during registration.</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-t">Chandigarh</div>
+                            <div class="card-d">Planned center shown during registration.</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-t">Chennai</div>
+                            <div class="card-d">Planned center shown during registration.</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-t">Kolkata</div>
+                            <div class="card-d">Planned center shown during registration.</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-t">Mananthavady</div>
+                            <div class="card-d">Planned center shown during registration.</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-t">Mumbai</div>
+                            <div class="card-d">Planned center shown during registration.</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-t">New Delhi</div>
+                            <div class="card-d">Planned center shown during registration.</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-t">Pune</div>
+                            <div class="card-d">Planned center shown during registration.</div>
+                        </div>
+                    </div>
+
+                    <div class="sh">Official preparation resources</div>
+                    <div class="cg">
+                        <div class="card">
+                            <div class="card-ico bl"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
+                            <div class="card-t">Sample questions</div>
+                            <div class="card-d">Use the official preparation pages for practice material, solution explanations, demo videos, and the exam interface tutorial.</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-ico cy"><svg viewBox="0 0 24 24"><path d="M8 5l11 7-11 7z"/><path d="M4 6v12"/></svg></div>
+                            <div class="card-t">Demo videos</div>
+                            <div class="card-d">Watch the walkthrough before test day so the computer-based interface is familiar.</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-ico gr"><svg viewBox="0 0 24 24"><path d="M7 4h10v16H7z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></div>
+                            <div class="card-t">Official websites</div>
+                            <div class="card-d">APS India dMAT page: <a href="https://aps-india.de/dmat/" target="_blank" style="color:var(--blue2)">aps-india.de/dmat</a> and dMAT official site: <a href="https://www.d-mat.de/en/" target="_blank" style="color:var(--blue2)">d-mat.de/en</a>.</div>
+                        </div>
+                    </div>
+
+                    <div class="callout warning">
+                        <div class="callout-icon"><svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+                        <div class="callout-body">
+                            <div class="callout-title">Bottom line</div>
+                            <div class="callout-text">dMAT is an additional requirement for some Indian Master's applicants, not a universal exam for all Germany-bound students. If your APS case is under the affected rules, confirm your exact field classification and timeline
+                                before you apply.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ════════════════════════════════════
+     VISA
+════════════════════════════════════ -->
+            <div id="pg-visa" class="pg">
+                <div class="pg-wrap">
+                    <div class="pg-header">
+                        <div class="pg-eye">Official Process</div>
+                        <h1 class="pg-title">Student Visa Guide</h1>
+                        <p class="pg-desc">Documents, portals, and what to expect at each stage of the German student visa process.</p>
+                    </div>
+
+                    <div class="sh">Pre-visa requirements</div>
+                    <div class="cg">
+                        <div class="card">
+                            <div class="card-ico bl"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+                            <div class="card-t">Admission Letter</div>
+                            <div class="card-d">Zulassungsbescheid from your university. Keep digital and printed copies.</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-ico cy"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
+                            <div class="card-t">APS Certificate</div>
+                            <div class="card-d">Mandatory for Indian applicants. Check whether dMAT applies to your APS case at <a href="https://aps-india.de" target="_blank" style="color:var(--blue2)">aps-india.de</a>.</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-ico vi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M8.5 8.5a5 5 0 017 7"/><path d="M14 10.5l-4 4"/><path d="M12 7.5v1.5"/></svg></div>
+                            <div class="card-t">dMAT Certificate</div>
+                            <div class="card-d">Needed only for certain Indian Master's applicants from 2026 onward. It does not replace APS.</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-ico am"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+                            <div class="card-t">Blocked Account</div>
+                            <div class="card-d">Proof of financial support. Must be funded before applying.</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-ico gr"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+                            <div class="card-t">Health Insurance</div>
+                            <div class="card-d">TK, AOK, or Barmer. Obtain confirmation before applying.</div>
+                        </div>
+                    </div>
+
+                    <div class="sh">Document checklist</div>
+                    <ul class="cl">
+                        <li>
+                            <div class="cl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Valid passport + photocopies</li>
+                        <li>
+                            <div class="cl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>APS Certificate (original + copy)</li>
+                        <li>
+                            <div class="cl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>dMAT Certificate, if required for your APS case</li>
+                        <li>
+                            <div class="cl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>University Admission Letter</li>
+                        <li>
+                            <div class="cl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Blocked Account Confirmation</li>
+                        <li>
+                            <div class="cl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Health Insurance Confirmation</li>
+                        <li>
+                            <div class="cl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Academic Certificates &amp; Transcripts</li>
+                        <li>
+                            <div class="cl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>IELTS / TOEFL Certificate</li>
+                        <li>
+                            <div class="cl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Statement of Purpose</li>
+                        <li>
+                            <div class="cl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>German-style CV</li>
+                        <li>
+                            <div class="cl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Passport-size photographs (official specs)</li>
+                        <li>
+                            <div class="cl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Completed Visa Application Form</li>
+                    </ul>
+
+                    <div class="sh">The CSP portal process</div>
+                    <div class="callout info">
+                        <div class="callout-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+                        <div class="callout-body">
+                            <div class="callout-title">CSP Portal</div>
+                            <div class="callout-text">Germany now processes student visas via <a href="https://digital.diplo.de/visa" target="_blank" style="color:var(--blue2)">digital.diplo.de/visa</a>. Create an account, select Student Visa, upload all documents, and submit
+                                online. The visa team reviews your upload—you may be asked for corrections. Respond quickly to avoid delays.</div>
+                        </div>
+                    </div>
+
+                    <div class="sh">Travel checklist</div>
+                    <div class="final-cl">
+                        <div class="fcl-item">
+                            <div class="fcl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Passport + Visa</div>
+                        <div class="fcl-item">
+                            <div class="fcl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>APS Certificate</div>
+                        <div class="fcl-item">
+                            <div class="fcl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Admission Letter</div>
+                        <div class="fcl-item">
+                            <div class="fcl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Blocked Account Confirmation</div>
+                        <div class="fcl-item">
+                            <div class="fcl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Health Insurance Certificate</div>
+                        <div class="fcl-item">
+                            <div class="fcl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Accommodation Booking</div>
+                        <div class="fcl-item">
+                            <div class="fcl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Academic Documents</div>
+                        <div class="fcl-item">
+                            <div class="fcl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Emergency Contacts + Copies</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ════════════════════════════════════
+     UNIVERSITIES
+════════════════════════════════════ -->
+            <div id="pg-universities" class="pg">
+                <div class="pg-wrap">
+                    <div class="pg-header">
+                        <div class="pg-eye">400+ Institutions</div>
+                        <h1 class="pg-title">Finding the Right University</h1>
+                        <p class="pg-desc">Germany's universities fall into three categories. Choosing the right type matters more than picking a famous name.</p>
+                    </div>
+
+                    <div class="sh">Where to search</div>
+                    <div class="cg">
+                        <div class="card">
+                            <div class="card-ico bl"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                            <div class="card-t">DAAD Program Database</div>
+                            <div class="card-d">Filter by subject, degree level, language, fees, and location.</div><a href="https://www.daad.de/en/studying-in-germany/universities/all-degree-programmes/" target="_blank" class="card-cta">Open <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></div>
+                        <div class="card">
+                            <div class="card-ico gr"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
+                            <div class="card-t">Hochschulkompass</div>
+                            <div class="card-d">Official German database for accreditation and degree verification.</div><a href="https://www.hochschulkompass.de/" target="_blank" class="card-cta">Open <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></div>
+                    </div>
+
+                    <div class="sh">TU vs FH — the key decision</div>
+                    <div class="cmp-grid">
+                        <div class="cmp-card feat">
+                            <div class="cmp-top-badge bl">⭐ Recommended — AI / CS / Research</div>
+                            <div class="cmp-name">Technical University (TU)</div>
+                            <div class="cmp-sub">TU Munich · RWTH Aachen · TU Darmstadt · KIT</div>
+                            <div class="pclist">
+                                <div class="pci p">Strong international reputation</div>
+                                <div class="pci p">Extensive research &amp; PhD pathways</div>
+                                <div class="pci p">Industry-funded research projects</div>
+                                <div class="pci p">Strong alumni networks</div>
+                                <div class="pci c">Higher academic workload</div>
+                                <div class="pci c">More competitive admissions</div>
+                            </div>
+                        </div>
+                        <div class="cmp-card">
+                            <div class="cmp-top-badge gr">Best for fast industry entry</div>
+                            <div class="cmp-name">Applied Sciences (FH/UAS)</div>
+                            <div class="cmp-sub">Frankfurt · Munich · Darmstadt UAS</div>
+                            <div class="pclist">
+                                <div class="pci p">Practical, project-based curriculum</div>
+                                <div class="pci p">Mandatory internships in many programs</div>
+                                <div class="pci p">Strong industry connections</div>
+                                <div class="pci p">Smaller class sizes</div>
+                                <div class="pci c">Fewer PhD opportunities</div>
+                                <div class="pci c">Less internationally recognized than top TUs</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sh3">Private Universities</div>
+                    <p class="body-p">GISMA, SRH, and IU International offer flexible admissions and more English-taught programs—but tuition ranges from €5,000 to €20,000+ per year. Some employers prefer public university graduates, so weigh the trade-off carefully.</p>
+
+                    <div class="callout success">
+                        <div class="callout-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+                        <div class="callout-body">
+                            <div class="callout-title">The simple rule</div>
+                            <div class="callout-text">If you want research, AI, or PhD pathways → Technical University. If your priority is industry experience and employment speed → University of Applied Sciences.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ════════════════════════════════════
+     FINANCE
+════════════════════════════════════ -->
+            <div id="pg-finance" class="pg">
+                <div class="pg-wrap">
+                    <div class="pg-header">
+                        <div class="pg-eye">Visa Requirement</div>
+                        <h1 class="pg-title">Blocked Account Providers</h1>
+                        <p class="pg-desc">A blocked account (Sperrkonto) proves you can financially support yourself—mandatory for the German student visa.</p>
+                    </div>
+
+                    <div class="sh">Provider comparison</div>
+                    <div class="cmp-grid" style="grid-template-columns:1fr 1fr;">
+                        <div class="cmp-card feat">
+                            <div class="cmp-top-badge bl">🥇 Most popular</div>
+                            <div class="cmp-name">Expatrio</div>
+                            <div class="cmp-sub">All-in-one solution</div>
+                            <div class="pclist">
+                                <div class="pci p">Fully online setup</div>
+                                <div class="pci p">Integrated health insurance</div>
+                                <div class="pci p">English-language support</div>
+                                <div class="pci p">Monthly fund releases after arrival</div>
+                            </div>
+                            <a href="https://www.expatrio.com/" target="_blank" class="cmp-ext">↗ expatrio.com</a>
+                        </div>
+                        <div class="cmp-card">
+                            <div class="cmp-top-badge am">🥈 Best value</div>
+                            <div class="cmp-name">Coracle</div>
+                            <div class="cmp-sub">Student-focused, lower fees</div>
+                            <div class="pclist">
+                                <div class="pci p">Competitive service fees</div>
+                                <div class="pci p">Fast online account opening</div>
+                                <div class="pci p">Simple document verification</div>
+                                <div class="pci p">German visa compliant</div>
+                            </div>
+                            <a href="https://www.coracle.de/" target="_blank" class="cmp-ext">↗ coracle.de</a>
+                        </div>
+                    </div>
+
+                    <div class="card" style="margin:12px 0 0;">
+                        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px;">
+                            <div>
+                                <div class="cmp-top-badge gr" style="font-size:10.5px;font-weight:700;color:var(--green);display:flex;align-items:center;gap:5px;margin-bottom:8px;">🥉 Most established</div>
+                                <div class="card-t" style="font-size:15px;">Fintiba</div>
+                                <p class="card-d" style="margin-top:6px;">Fully digital, visa-compliant, dedicated student support, health &amp; travel insurance options. Extensive experience—best for students who value a well-established provider.</p>
+                            </div>
+                        </div>
+                        <a href="https://www.fintiba.com/" target="_blank" class="card-cta" style="margin-top:12px;">↗ fintiba.com <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                    </div>
+
+                    <div class="sh">Required documents</div>
+                    <ul class="cl">
+                        <li>
+                            <div class="cl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Passport</li>
+                        <li>
+                            <div class="cl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Admission Letter or university application proof</li>
+                        <li>
+                            <div class="cl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>APS Certificate (Indian applicants)</li>
+                        <li>
+                            <div class="cl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Contact Information</li>
+                        <li>
+                            <div class="cl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Proof of Address (if requested)</li>
+                    </ul>
+                    <div class="callout warning">
+                        <div class="callout-icon"><svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+                        <div class="callout-body">
+                            <div class="callout-title">Required amount changes</div>
+                            <div class="callout-text">The required blocked amount is set by German authorities and updated periodically. Always verify the current figure before transferring funds.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ════════════════════════════════════
+     SCHOLARSHIPS
+════════════════════════════════════ -->
+            <div id="pg-scholarships" class="pg">
+                <div class="pg-wrap">
+                    <div class="pg-header">
+                        <div class="pg-eye">Funding</div>
+                        <h1 class="pg-title">Scholarships for Germany</h1>
+                        <p class="pg-desc">Apply 6–12 months before your intake. Strong academics, a compelling SOP, and early applications dramatically improve your odds.</p>
+                    </div>
+
+                    <div class="sh">Available programs</div>
+                    <div class="sg">
+                        <div class="sc">
+                            <div class="sc-top">
+                                <div>
+                                    <div class="sc-name">DAAD Scholarship</div>
+                                    <div class="sc-sub">Most prestigious scholarship in Germany</div>
+                                </div><span class="badge b-bl">Priority #1</span></div>
+                            <div class="sc-tags"><span class="badge b-bl">Master's</span><span class="badge b-bl">PhD</span><span class="badge b-bl">Research</span></div>
+                            <div class="sc-perks"><span class="sc-perk">Monthly stipend</span><span class="sc-perk">Health insurance</span><span class="sc-perk">Travel allowance</span><span class="sc-perk">Research funding</span></div>
+                            <a href="https://www.daad.de/en/" target="_blank" class="sc-link">↗ daad.de</a>
+                        </div>
+                        <div class="sc">
+                            <div class="sc-top">
+                                <div>
+                                    <div class="sc-name">Deutschlandstipendium</div>
+                                    <div class="sc-sub">€300/month regardless of family income</div>
+                                </div><span class="badge b-gr">Priority #2</span></div>
+                            <div class="sc-tags"><span class="badge b-bl">Bachelor's</span><span class="badge b-bl">Master's</span></div>
+                            <div class="sc-perks"><span class="sc-perk">€300 per month</span><span class="sc-perk">Income-independent</span><span class="sc-perk">Academic excellence</span></div>
+                            <a href="https://www.deutschlandstipendium.de/" target="_blank" class="sc-link">↗ deutschlandstipendium.de</a>
+                        </div>
+                        <div class="sc">
+                            <div class="sc-top">
+                                <div>
+                                    <div class="sc-name">Heinrich Böll Foundation</div>
+                                    <div class="sc-sub">Focus: sustainability &amp; social responsibility</div>
+                                </div><span class="badge b-am">Foundation</span></div>
+                            <div class="sc-tags"><span class="badge b-bl">Master's</span><span class="badge b-bl">PhD</span></div>
+                            <div class="sc-perks"><span class="sc-perk">Monthly support</span><span class="sc-perk">Networking</span><span class="sc-perk">Training programs</span></div>
+                            <a href="https://www.boell.de/en/scholarships" target="_blank" class="sc-link">↗ boell.de</a>
+                        </div>
+                        <div class="sc">
+                            <div class="sc-top">
+                                <div>
+                                    <div class="sc-name">Erasmus+</div>
+                                    <div class="sc-sub">EU exchange &amp; mobility grants</div>
+                                </div><span class="badge b-cy">EU Program</span></div>
+                            <div class="sc-tags"><span class="badge b-bl">All levels</span></div>
+                            <div class="sc-perks"><span class="sc-perk">Tuition support</span><span class="sc-perk">Mobility grants</span><span class="sc-perk">EU exchange</span></div>
+                            <a href="https://erasmus-plus.ec.europa.eu/" target="_blank" class="sc-link">↗ erasmus-plus.ec.europa.eu</a>
+                        </div>
+                    </div>
+
+                    <div class="sh">Application tips</div>
+                    <ul class="cl">
+                        <li>
+                            <div class="cl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Apply 6–12 months before intake—most programs have very early deadlines</li>
+                        <li>
+                            <div class="cl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Maintain a strong CGPA (8.0+/10 or equivalent)</li>
+                        <li>
+                            <div class="cl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Write a compelling SOP: Why Germany? Why this program? Your career goals?</li>
+                        <li>
+                            <div class="cl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Obtain strong Letters of Recommendation from professors</li>
+                        <li>
+                            <div class="cl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Highlight internships, research, volunteering, and leadership</li>
+                        <li>
+                            <div class="cl-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Check university-funded scholarships (e.g. ELIZA)—fewer applicants, better odds</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ════════════════════════════════════
+     JOBS
+════════════════════════════════════ -->
+            <div id="pg-jobs" class="pg">
+                <div class="pg-wrap">
+                    <div class="pg-header">
+                        <div class="pg-eye">Work While You Study</div>
+                        <h1 class="pg-title">Student Jobs in Germany</h1>
+                        <p class="pg-desc">Non-EU students can work 140 full days or 280 half-days per year. Here's how to make it count.</p>
+                    </div>
+
+                    <div class="sh">Job types</div>
+                    <div class="cg">
+                        <div class="card">
+                            <div class="card-ico bl"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+                            <div class="card-t">Werkstudent ⭐</div>
+                            <div class="card-d">Field-related position. €14–25+/hr. Best for career growth and potential full-time conversion.</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-ico gr"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
+                            <div class="card-t">HiWi (Student Assistant)</div>
+                            <div class="card-d">Research, lab, teaching at university. €13–18/hr. Flexible and great for academic networking.</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-ico am"><svg viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/></svg></div>
+                            <div class="card-t">Part-Time Jobs</div>
+                            <div class="card-d">Supermarket, warehouse, restaurant, delivery. €12.82–16/hr. Easier without German skills.</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-ico cy"><svg viewBox="0 0 24 24"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0018 9h-1.26A8 8 0 103 16.3"/></svg></div>
+                            <div class="card-t">Internship (Praktikum)</div>
+                            <div class="card-d">Mandatory or voluntary. €800–2000+/month. Many Werkstudent offers start here.</div>
+                        </div>
+                    </div>
+
+                    <div class="sh">Salary expectations</div>
+                    <div class="tbl-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Job Type</th>
+                                    <th>Hourly Pay</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="td-hi">AI / ML Working Student</td>
+                                    <td><span class="td-tag bl">€18–30+/hr</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-hi">Data Analyst Working Student</td>
+                                    <td><span class="td-tag bl">€16–28+/hr</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Werkstudent IT / Software</td>
+                                    <td><span class="td-tag gr">€15–25+/hr</span></td>
+                                </tr>
+                                <tr>
+                                    <td>HiWi (Student Assistant)</td>
+                                    <td>€13–18/hr</td>
+                                </tr>
+                                <tr>
+                                    <td>Delivery Rider</td>
+                                    <td>€13–18/hr</td>
+                                </tr>
+                                <tr>
+                                    <td>Warehouse</td>
+                                    <td>€13–16/hr</td>
+                                </tr>
+                                <tr>
+                                    <td>Restaurant Staff</td>
+                                    <td>€13–15/hr</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sh">Best portals</div>
+                    <div class="cg">
+                        <div class="card">
+                            <div class="card-t">LinkedIn Jobs</div><a href="https://www.linkedin.com/jobs/" target="_blank" class="card-cta">linkedin.com/jobs <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></div>
+                        <div class="card">
+                            <div class="card-t">Indeed Germany</div><a href="https://de.indeed.com/" target="_blank" class="card-cta">de.indeed.com <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></div>
+                        <div class="card">
+                            <div class="card-t">StepStone</div><a href="https://www.stepstone.de/" target="_blank" class="card-cta">stepstone.de <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></div>
+                        <div class="card">
+                            <div class="card-t">Stellenwerk</div><a href="https://www.stellenwerk.de/" target="_blank" class="card-cta">stellenwerk.de <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></div>
+                        <div class="card">
+                            <div class="card-t">Glassdoor</div><a href="https://www.glassdoor.com/Job/" target="_blank" class="card-cta">glassdoor.com <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></div>
+                        <div class="card">
+                            <div class="card-t">Academics.de</div><a href="https://www.academics.de/" target="_blank" class="card-cta">academics.de <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></div>
+                    </div>
+
+                    <div class="sh">Search timeline</div>
+                    <ul class="steps">
+                        <li class="step">
+                            <div class="step-left">
+                                <div class="step-num" style="background:var(--green-dim);border-color:rgba(16,217,130,.25);color:var(--green);">S1</div>
+                                <div class="step-line"></div>
+                            </div>
+                            <div class="step-body">
+                                <div class="step-t">First Semester</div>
+                                <div class="step-d">Focus on studies. Improve German to A2–B1. Build and optimize your LinkedIn profile.</div>
+                            </div>
+                        </li>
+                        <li class="step">
+                            <div class="step-left">
+                                <div class="step-num" style="background:var(--amber-dim);border-color:rgba(245,158,11,.25);color:var(--amber);">S2</div>
+                                <div class="step-line"></div>
+                            </div>
+                            <div class="step-body">
+                                <div class="step-t">After 2–3 Months</div>
+                                <div class="step-d">Apply for HiWi positions and internships. Start networking actively through LinkedIn and campus events.</div>
+                            </div>
+                        </li>
+                        <li class="step">
+                            <div class="step-left">
+                                <div class="step-num">S3</div>
+                            </div>
+                            <div class="step-body">
+                                <div class="step-t">After First Semester</div>
+                                <div class="step-d">Target Werkstudent positions directly related to your degree. This is your career-building phase.</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ════════════════════════════════════
+     BLOG
+════════════════════════════════════ -->
+            <div id="pg-blog" class="pg">
+                <div class="pg-wrap">
+                    <div class="pg-header">
+                        <div class="pg-eye">Community</div>
+                        <h1 class="pg-title">Blog & Student Stories</h1>
+                        <p class="pg-desc">Real experiences from students in Germany—visa journeys, job searches, accommodation tips. Upload your story and help the next wave.</p>
+                    </div>
+
+                    <div class="sh">Publish your story</div>
+                    <div class="upload-zone" id="upload-zone" onclick="triggerUpload()" ondragover="event.preventDefault();this.style.borderColor='var(--blue-ring)'" ondragleave="this.style.borderColor='var(--line2)'">
+                        <div class="uz-icon">
+                            <svg viewBox="0 0 24 24"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0018 9h-1.26A8 8 0 103 16.3"/></svg>
+                        </div>
+                        <div class="uz-title">Drop your story here</div>
+                        <div class="uz-desc">Supports .txt, .md, and .docx — drag and drop or click to browse</div>
+                        <button class="uz-btn" onclick="event.stopPropagation();triggerUpload()">
+        <svg viewBox="0 0 24 24"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0018 9h-1.26A8 8 0 103 16.3"/></svg>
+        Choose File
+      </button>
+                        <input type="file" id="file-input" accept=".txt,.md,.docx" style="display:none" onchange="fileChosen(this)">
+                    </div>
+                    <div id="upload-success" style="display:none;align-items:center;gap:12px;background:var(--green-dim);border:1px solid rgba(16,217,130,.25);border-radius:var(--rl);padding:14px 18px;margin-top:10px;font-size:14px;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span id="success-msg">File received and queued for review.</span>
+                    </div>
+
+                    <div class="sh">Recent community posts</div>
+                    <div class="community" id="community">
+                        <div class="cp"><span class="cp-dot" style="background:var(--blue)"></span>
+                            <div>
+                                <div class="cp-name">Banking in Germany: N26 vs DKB</div>
+                                <div class="cp-meta">Sanjay R. · 2 days ago</div>
+                            </div><span class="cp-arr"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span></div>
+                        <div class="cp"><span class="cp-dot" style="background:var(--green)"></span>
+                            <div>
+                                <div class="cp-name">APS Interview Preparation Guide</div>
+                                <div class="cp-meta">Ananya K. · 5 days ago</div>
+                            </div><span class="cp-arr"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span></div>
+                        <div class="cp"><span class="cp-dot" style="background:var(--amber)"></span>
+                            <div>
+                                <div class="cp-name">Surviving the German Winter Semester</div>
+                                <div class="cp-meta">Rahul M. · 1 week ago</div>
+                            </div><span class="cp-arr"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span></div>
+                        <div class="cp"><span class="cp-dot" style="background:var(--violet)"></span>
+                            <div>
+                                <div class="cp-name">Learning German A1 in 3 Months</div>
+                                <div class="cp-meta">Meera S. · 2 weeks ago</div>
+                            </div><span class="cp-arr"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span></div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        const PAGES = ['home', 'process', 'dmat', 'visa', 'universities', 'finance', 'scholarships', 'jobs', 'blog'];
+        const LABELS = {
+            'home': 'Overview',
+            'process': 'Application Steps',
+            'dmat': 'dMAT Guide',
+            'visa': 'Visa Guide',
+            'universities': 'Universities',
+            'finance': 'Blocked Accounts',
+            'scholarships': 'Scholarships',
+            'jobs': 'Student Jobs',
+            'blog': 'Blog'
+        };
+        let currentPage = 'home';
+
+        function goPage(id, label) {
+            document.querySelectorAll('.pg').forEach(p => p.classList.remove('on'));
+            document.querySelectorAll('.nav-link').forEach(n => n.classList.remove('on'));
+            const pg = document.getElementById('pg-' + id);
+            if (pg) pg.classList.add('on');
+            document.querySelectorAll('.nav-link').forEach(n => {
+                if (n.getAttribute('onclick') && n.getAttribute('onclick').includes("'" + id + "'")) n.classList.add('on');
+            });
+            currentPage = id;
+            const crumb = document.getElementById('breadcrumb');
+            const lbl = label || LABELS[id] || id;
+            crumb.innerHTML = 'Guide <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg> <span>' + escHtml(lbl) + '</span>';
+            const idx = PAGES.indexOf(id);
+            const pct = Math.round(((idx + 1) / PAGES.length) * 100);
+            document.getElementById('prog-fill').style.width = pct + '%';
+            document.getElementById('pct-label').textContent = pct + '%';
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            if (window.innerWidth <= 900) document.getElementById('sidebar').classList.remove('open');
+            return false;
+        }
+
+        function toggleTheme() {
+            const html = document.documentElement;
+            const isLight = html.getAttribute('data-theme') === 'light';
+            const newTheme = isLight ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcons(newTheme);
+        }
+
+        function updateThemeIcons(theme) {
+            const isSun = document.getElementById('i-sun');
+            const isMoon = document.getElementById('i-moon');
+            if (theme === 'light') {
+                isSun.style.display = 'block';
+                isMoon.style.display = 'none';
+            } else {
+                isSun.style.display = 'none';
+                isMoon.style.display = 'block';
+            }
+        }
+
+        function initTheme() {
+            const saved = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', saved);
+            updateThemeIcons(saved);
+        }
+
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('open');
+        }
+
+        function triggerUpload() {
+            document.getElementById('file-input').click();
+        }
+
+        function fileChosen(input) {
+            if (!input.files || !input.files[0]) return;
+            const name = input.files[0].name;
+            const ok = /\.(txt|md|docx)$/i.test(name);
+            if (!ok) {
+                alert('Please upload a .txt, .md, or .docx file.');
+                return;
+            }
+            const msg = document.getElementById('upload-success');
+            msg.style.display = 'flex';
+            document.getElementById('success-msg').textContent = '"' + escHtml(name) + '" received — queued for editorial review. Published within 48 hours.';
+            const cp = document.createElement('div');
+            cp.className = 'cp';
+            cp.innerHTML = '<span class="cp-dot" style="background:var(--cyan)"></span><div><div class="cp-name">' + escHtml(name.replace(/\.[^.]+$/, '')) + '</div><div class="cp-meta">Just uploaded · pending review</div></div><span class="cp-arr"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></span>';
+            document.getElementById('community').prepend(cp);
+            input.value = '';
+        }
+
+        function escHtml(s) {
+            return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+        }
+
+        // Init
+        initTheme();
+    </script>
+</body>
+
+</html>
